@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+
+{% block section %}
+<article>
+	<h2>CISCO</h2>
+		{% if to_old %}
+			<p class="warning">ATTENTION, la dernière mise à jour semble dater de plus de 24 heures !</p>
+		{% endif %}
+	<p>
+		Dernière mise à jour : <strong>{{ last_update }}</strong><br />
+		Nombre de stagiaires : <strong>{{ nb_stags }}</strong><br />
+		Nombre de classes : <strong>{{ nb_classes }}</strong>
+	</p>
+	<form action="{% url 'main.views.home' %}" method="post">
+		<fieldset><legend>Chercher un stagiaire ou une classe</legend>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Chercher" style="visibility: hidden" />
+		</fieldset>
+	</form>
+	
+	<div id="result_cisco">
+		<h4>{{ entete }}</h4>
+		<pre><strong>{{ mesg }}</strong></pre>
+	</div>
+
+</article>
+{% endblock %}

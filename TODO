@@ -1,0 +1,23 @@
+Liste des choses à faire dans un proche avenir ou plus tard ou jamais...
+
+CISCO
+	BUGS
+	- Supprimer les classes avant de les recréer (copier dans un répertoire temp, puis déplacer)
+	ou
+	- conserver une copie des anciens pour pouvoir les consulter
+	AMELIORER
+	- transformer les dates en "Aujourd'hui" en "Hier"
+	- module classes : afficher le nombre de stagiaires dans une classe
+		peut-être revoir pytacad-server qui récupère ce nombre mais ne doit pas le stocker...
+	- Améliorer l'affichage des résultats
+		- ne plus utiliser la balise <pre>
+		- mettre des balises HTML à la place
+		- afficher les stagiaires des classes dans un tableau (+ pratique pour copier/coller)
+		- afficher les infos stagiaires dans un tableau (+ pratique pour copier/coller)
+	- ajouter dans le fichier des classes
+		- le nombre de stagiaires de la classe
+		- le lien qui permet l'accès à la classe sur le site de netacad (c'est surtout le nombre qui référence le lien qui est intérressant)
+	- stocker les infos différement. Avantage : pour retraiter les infos
+		- soit dans une base de données
+		- soit dans des fichiers XML ou JSON (avantage : modifs plus simples ?)
+ 

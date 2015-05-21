@@ -1,0 +1,31 @@
+<VirtualHost *:80>
+        ServerName webeni.fr
+        DocumentRoot /projets/webeni
+
+        WSGIDaemonProcess daemon user=www-data group=www-data processes=2 threads=15 display-name=%{group}
+        WSGIScriptAlias / /projets/webeni/webeni/wsgi.py
+        
+        Alias /robots.txt /projets/webeni/static/robots.txt
+	Alias /favicon.ico /projets/webeni/static/favicon.ico
+	
+	AliasMatch ^/([^/]*\.css) /projets/webeni/static/styles/$1
+	Alias  /static/  /projets/webeni/static/
+	Alias /media/ /projets/webeni/media/
+
+        <Directory /projets/webeni>
+                Order allow,deny
+                Allow from all
+        </Directory>
+        
+	<Directory /projets/webeni/static>
+		Order deny,allow
+		allow from all
+	</Directory>
+
+	<Directory /projets/webeni/media>
+		Order deny,allow
+		allow from all
+        </Directory>
+
+</VirtualHost>
+

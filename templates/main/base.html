@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+	<link rel="shortcut icon" href="{% static 'favicon.png' %}" />
+	<title>{% block title %}Web bEN ENI{% endblock %}</title>
+</head>
+ 
+<body>
+	<a href=""><header>		
+		{% block header %}
+		<img src="media/logoENIecole.gif" alt="Logo de l'ENI" id="logoeni"/>
+		<h1>Le Web de <br />bEN à l'ENI</h1>
+		<img src="media/chaise_verte.jpg" id="leschaises" alt="Les chaises vertes"/>
+		{% endblock %}
+	</header></a>
+
+	<nav>
+		{% block nav %}
+		{% endblock %}
+	</nav>
+ 
+	<section>
+		{% block section %}
+		{% endblock %}
+	</section>
+ 
+	<footer>
+		{% block footer %}
+			<p>Version : 0.3 | Powered by Benoit Guibert</p>
+		{% endblock %}
+	</footer>
+</body>
+</html>

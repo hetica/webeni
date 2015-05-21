@@ -1,0 +1,20 @@
+Version 0.3
+date : 20/05/2015
+- Ajout d'un footer
+- Affiche un message d'avertissement lorsque la dernière mise à jour date de plus de 24 heures
+___________________________________________________________________________________
+
+Version 0.2
+date : 29/03/2014
+Quelques modifications cosmétiques
+___________________________________________________________________________________
+
+Version 0.1
+date : 26/03/2014
+Fonctionalités :
+	Infos Cisco :
+	- page HTTP avec le nombre de classes et  de stagiaires, et la date de dernière mise à jour
+	- formulaire pour rechercher des infos sur : 
+		-  des stagiaires
+		-  des classes
+___________________________________________________________________________________
