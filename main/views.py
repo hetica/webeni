@@ -32,7 +32,7 @@ def home(request):
 	nb_stags = sum(1 for _ in open(ciscoliststags))
 	
 	# La dernière mise à jour date t-elle de plus de plus de 24 heures ?
-	one_days_ago = datetime.now() - timedelta(hours=1)
+	one_days_ago = datetime.now() - timedelta(days=1)
 	filetime = datetime.fromtimestamp(os.path.getctime(ciscoliststags))
 	to_old = one_days_ago > filetime
 
